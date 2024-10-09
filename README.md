@@ -15,3 +15,13 @@ terraform {
   }
 }
 
+Requirements
+
+    S3 bucket: Make sure the S3 bucket terraform-up-and-running-state exists in the specified region (us-east-2).
+    DynamoDB table: Create a DynamoDB table for state locking. Replace "terraform-up-and-running-locks" with the name of your DynamoDB table.
+
+Steps to configure
+
+    Set up the S3 bucket and DynamoDB table in AWS if they do not already exist.
+    Add the above configuration to your main.tf or backend.tf file.
+    Initialize Terraform with terraform init to connect to the remote state.
